@@ -1,0 +1,12 @@
+Esercizio 1: Sistema di Gestione Biblioteca
+Obiettivo: Creare un diagramma ER per una biblioteca che gestisce libri e prestiti.
+
+Requisiti:
+
+Una tabella Libri con campi: id_libro (PK), titolo, autore, genere, anno_pubblicazione.
+Una tabella Utenti con campi: id_utente (PK), nome, cognome, email, telefono.
+Una tabella Prestiti per tracciare i libri presi in prestito, con campi: id_prestito (PK), id_libro (FK), id_utente (FK), data_prestito, data_restituzione_prevista, data_restituzione_effettiva.
+Vincoli:
+
+Un libro può essere preso in prestito solo da un utente alla volta.
+Ogni utente può avere più prestiti nel tempo.
