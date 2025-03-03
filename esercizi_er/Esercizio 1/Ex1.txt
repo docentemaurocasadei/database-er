@@ -9,4 +9,4 @@ Una tabella Prestiti per tracciare i libri presi in prestito, con campi: id_pres
 Vincoli:
 
 Un libro può essere preso in prestito solo da un utente alla volta.
-Ogni utente può avere più prestiti nel tempo.__
+Ogni utente può avere più prestiti nel tempo.__123
