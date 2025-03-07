@@ -25,10 +25,10 @@ VALUES
 -- 3. Inserimento Iscrizioni (con la data odierna aggiornata)
 INSERT INTO iscrizioni (cliente_id, abbonamento_id, data_inizio, data_fine)
 VALUES 
-(1, 2, '2024-02-01', '2024-05-01'), -- Luca ha un abbonamento trimestrale (scaduto)
+(1, 2, '2025-02-01', '2025-05-01'), -- Luca ha un abbonamento trimestrale (scaduto)
 (2, 3, '2024-03-01', '2025-03-01'), -- Giulia ha un abbonamento annuale (ancora attivo)
 (3, 1, '2024-04-01', '2024-05-01'), -- Marco ha un abbonamento mensile (scaduto)
-(4, 2, '2024-03-12', '2024-06-12'), -- Francesca ha un abbonamento trimestrale (ancora attivo)
+(4, 2, '2025-03-12', '2025-06-12'), -- Francesca ha un abbonamento trimestrale (ancora attivo)
 (5, 3, '2024-02-25', '2025-02-25'), -- Alessandro ha un abbonamento annuale (ancora attivo)
 (6, 1, '2024-02-01', '2024-03-01'), -- Martina ha un abbonamento mensile (scaduto)
 (7, 4, '2024-04-01', '2024-09-01'), -- Davide ha un abbonamento semestrale (ancora attivo)
