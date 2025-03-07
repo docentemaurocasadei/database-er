@@ -9,7 +9,7 @@ nome (VARCHAR(50)): Nome del cliente.
 cognome (VARCHAR(50)): Cognome del cliente.
 email (VARCHAR(100)): Indirizzo email del cliente.
 telefono (VARCHAR(15)): Numero di telefono del cliente.
-data_iscrizione (DATE): Data in cui il cliente si è iscritto alla palestra.
+
 
 Relazioni:
 Un cliente può avere molte iscrizioni.
@@ -64,15 +64,7 @@ orario (TIME): Orario di inizio del corso.
 giorni_settimana (VARCHAR(100)): Giorni della settimana in cui il corso è disponibile (es. Lunedì, Mercoledì, Venerdì).
 
 Relazioni:
-Un corso può avere molti partecipanti, ma la relazione non è diretta con altre tabelle; tuttavia, i clienti possono partecipare ai corsi.
-La relazione con clienti o iscrizioni può essere gestita separatamente in un'altra tabella di partecipazione se necessaria.
-
-Cardinalità:
-Molti a Molti (N:M) con la tabella clienti o altre tabelle di partecipazione (non descritta, ma possibile).
-Schema Relazionale
-clienti → iscrizioni: Un cliente può avere molte iscrizioni (relazione uno a molti).
-abbonamenti → iscrizioni: Un abbonamento può essere sottoscritto da molti clienti (relazione uno a molti).
-clienti → corsi (relazione molti a molti, tramite una tabella di partecipazione non presente in questo esempio, ma può essere aggiunta in futuro).
+nessuna
 
 --- POPOLARE IL DATABASE:
 Inserire almeno 10 clienti, 5 abbonamenti, 5 corsi e 15 iscrizioni (alcune delle quali scadute):
@@ -84,15 +76,25 @@ Corsi: 5 corsi disponibili con orari e giorni specifici per ogni corso.
 
 Richieste:
 Estrarre tutti i clienti iscritti alla palestra.
+
 Visualizzare tutti gli abbonamenti disponibili.
+
 Mostrare tutti i clienti con il tipo di abbonamento scelto.
+
 Mostrare i clienti con abbonamento ancora valido oggi.
+
 Contare quanti clienti hanno un abbonamento attivo.
+
 Estrarre tutti i corsi disponibili con i rispettivi istruttori.
+
 Mostrare quanti clienti hanno scelto ogni tipo di abbonamento.
+
 Estrarre i clienti ordinati per data di iscrizione (dal più recente al meno recente).
+
 Visualizzare i corsi disponibili nei giorni Lunedì e Mercoledì.
+
 Estrarre i clienti che hanno scelto un abbonamento annuale.
+
 Challenge Extra: Rinnovo automatico di un abbonamento.
 
 
