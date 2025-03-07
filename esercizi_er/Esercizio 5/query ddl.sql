@@ -5,8 +5,7 @@ CREATE TABLE clienti (
     nome VARCHAR(100) NOT NULL,
     cognome VARCHAR(100) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
-    telefono VARCHAR(15),
-    data_iscrizione DATE NOT NULL
+    telefono VARCHAR(15)
 );
 CREATE TABLE abbonamenti (
     abbonamento_id INT AUTO_INCREMENT PRIMARY KEY,
