@@ -23,3 +23,19 @@ regex mysql
 -- select email, REGEXP_LIKE(email, "[a-z.]{1,}@[a-z]{1,}\.[a-z]{2,}") as mail_corretta from clienti where email is not null and email != ""
 
 select email, REGEXP_LIKE(email, "[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})") as mail_corretta from clienti where email is not null and email != "";
+
+-- select email, REGEXP_LIKE(email, "[a-z.]{1,}@[a-z]{1,}\.[a-z]{2,}") as mail_corretta from clienti where email is not null and email != ""
+
+-- select email, REGEXP_LIKE(email, "[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})") as mail_corretta from clienti where email is not null and email != "";
+
+#1 creare una query per aggiornare in maiuscolo tutti i nomi degli abbonamenti
+-- update abbonamenti set nome = upper(nome) limit 50;
+
+-- select nome from abbonamenti;
+
+START TRANSACTION;
+update abbonamenti set nome = lower(nome) limit 50;
+update clienti set data_iscrizione = '2024-02-05' where cliente_id IN(
+select cliente_id from iscrizioni where data_inizio < '2025-03-01'
+) limit 50;
+commit;
