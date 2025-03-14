@@ -1,0 +1,25 @@
+pattern:
+TR(\d{6})(\d{13})(\d{4})
+
+TR00541280074123654780015
+TR00541281012121212210040
+---
+
+pattern: \d{4}
+iscritto dal 2024
+iscritto dal 2025 e possibile rinnovo mel 26
+non iscritto dal 2023
+
+---- pattern: [a-z.]{1,}@[a-z]{1,}.[a-z]{2,}
+( da migliorare )
+mauro@gmail.com
+giovanni.testi@yahoo.com
+tentoni.it
+www.miosito.it
+graziani.alessandra@libero.it
+
+----
+regex mysql
+-- select email, REGEXP_LIKE(email, "[a-z.]{1,}@[a-z]{1,}\.[a-z]{2,}") as mail_corretta from clienti where email is not null and email != ""
+
+select email, REGEXP_LIKE(email, "[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})") as mail_corretta from clienti where email is not null and email != "";
